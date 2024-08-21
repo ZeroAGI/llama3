@@ -48,7 +48,7 @@ class Tokenizer:
 
     special_tokens: Dict[str, int]
 
-    num_reserved_special_tokens = 256
+    num_reserved_special_tokens = 256 + 2 + 2**13 + 2 + 2**18 
 
     pat_str = r"(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+"  # noqa: E501
 
